@@ -23,22 +23,23 @@ def isCollide(data):
     return 
 
 if __name__=="__main__":
-    print("Hey..Dino game is about to start in 3 seconds")
+    print("Hey...This Dino game is about to start in 2 seconds")
     time.sleep(2)
 
     while True:
-        #This line below is used to convert coloured image into greyscale image
+        #These lines below is used to convert coloured image into greyscale image
+        #Here grayscale image is used as processing a coloured image will take time
+        
         image=ImageGrab.grab().convert("L")
         data=image.load()
-        # print(asarray(image)) #This as array makes the program run slow so it is removed
         isCollide(data)
 
-    # This 2 for loops is used for hit and trial method for placing the rectangle
+    # These 2 for loops are used for hit and trial method for positioning rectangle
         ##Draw a rectangle for cactus
         # for i in range(385,480):
         #     for j in range(595,720):
-        #         data[i,j]=0 #This detects a black rectangle on the grey screen
-
+        #         data[i,j]=0 ##Here 0 denotes the pixel value for black colour
+        
         # # #Draw a rectangle for birds
         # for i in range(385,480):
         #     for j in range(500,595):
